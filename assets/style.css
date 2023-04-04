@@ -3662,7 +3662,7 @@ ol {
 
 /* The Close Button */
 
-.close {
+.close,.exit {
     position: absolute;
     top: 15px;
     right: 35px;
@@ -3679,6 +3679,12 @@ ol {
     cursor: pointer;
 }
 
+.exit:hover,
+.exit:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
 
 /* 100% Image Width on Smaller Screens */
 

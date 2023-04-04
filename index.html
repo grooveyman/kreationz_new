@@ -601,7 +601,7 @@
                         <div class="product__item__pic set-bg" data-setbg="assets/images/305kreationz/hair_sleeve_edt/IMG_3051.jpg" style="background-image: url(&quot;assets/images/305kreationz/hair_sleeve_edt/IMG_3051.jpg&quot;);">
                             <ul class="product__hover">
                                 <li>
-                                    <a onclick="getModal(['assets/images/305kreationz/hair_sleeve_edt/IMG_3051.jpg','assets/images/305kreationz/hair_sleeve_edt/IMG_3053.jpg'],['Sleeves I - $ 15.0','Sleeves I - $ 15.0'])" class="image_hover">
+                                    <a onclick="Modal_2(['assets/images/305kreationz/hair_sleeve_edt/IMG_3051.jpg','assets/images/305kreationz/hair_sleeve_edt/IMG_3053.jpg'],['Sleeves I - $ 15.0','Sleeves I - $ 15.0'])" class="image_hover">
                                         <span class="fa-solid fa-expand"></span>
                                     </a>
                                 </li>
@@ -618,7 +618,7 @@
                         <div class="product__item__pic set-bg" data-setbg="assets/images/305kreationz/hair_sleeve_edt/IMG_3057.jpg" style="background-image: url(&quot;assets/images/305kreationz/hair_sleeve_edt/IMG_3057.jpg&quot;);">
                             <ul class="product__hover">
                                 <li>
-                                    <a onclick="getModal(['assets/images/305kreationz/hair_sleeve_edt/IMG_3057.jpg','assets/images/305kreationz/hair_sleeve_edt/IMG_3055.jpg'],['Sleeves II - $ 15.0','Sleeves II - $ 15.0'])" class="image_hover">
+                                    <a onclick="Modal_2(['assets/images/305kreationz/hair_sleeve_edt/IMG_3057.jpg','assets/images/305kreationz/hair_sleeve_edt/IMG_3055.jpg'],['Sleeves II - $ 15.0','Sleeves II - $ 15.0'])" class="image_hover">
                                         <span class="fa-solid fa-expand"></span>
                                     </a>
                                 </li>
@@ -635,7 +635,7 @@
                         <div class="product__item__pic set-bg" data-setbg="assets/images/305kreationz/hair_sleeve_edt/IMG_3058.jpg" style="background-image: url(&quot;assets/images/305kreationz/hair_sleeve_edt/IMG_3058.jpg&quot;);">
                             <ul class="product__hover">
                                 <li>
-                                    <a onclick="getModal(['assets/images/305kreationz/hair_sleeve_edt/IMG_3058.jpg','assets/images/305kreationz/hair_sleeve_edt/IMG_3061.jpg'],['Sleeves II - $ 15.0','Sleeves II - $ 15.0'])" class="image_hover">
+                                    <a onclick="Modal_2(['assets/images/305kreationz/hair_sleeve_edt/IMG_3058.jpg','assets/images/305kreationz/hair_sleeve_edt/IMG_3061.jpg'],['Sleeves II - $ 15.0','Sleeves II - $ 15.0'])" class="image_hover">
                                         <span class="fa-solid fa-expand"></span>
                                     </a>
                                 </li>
@@ -667,7 +667,6 @@
                         <div class="product__item__pic set-bg" data-setbg="assets/images/305kreationz/necklace_earings_edt/Azure.jpg" style="background-image: url(&quot;assets/images/305kreationz/necklace_earings_edt/Azure.jpg&quot;);">
                             <ul class="product__hover">
                                 <li><a id="" onclick="getModal(['assets/images/305kreationz/necklace_earings_edt/Azure.jpg'],['Azure Set - $ 25.0'])"class="image_hover"><span class="fa-solid fa-expand"></span></a></li>
-                                <li><a href="assets/images/305kreationz/necklace_earings_edt/Azure.jpg" class="image-popup"><span class="arrow_expand"></span></a></li>
                             </ul>
                         </div>
                         <div class="product__item__text">
@@ -732,7 +731,7 @@
                     <div class="product__item">
                         <div class="product__item__pic set-bg" data-setbg="assets/images/305kreationz/necklace_earings_edt/Sizzled_black.jpg" style="background-image: url(&quot;assets/images/305kreationz/necklace_earings_edt/Sizzled_black.jpg&quot;);">
                             <ul class="product__hover">
-                                <li><a id="" onclick="getModal(['assets/images/305kreationz/necklace_earings_edt/Sizzled_black.jp'],['Sizzled Black Set - $ 25.0'])"class="image_hover"><span class="fa-solid fa-expand"></span></a></li>
+                                <li><a id="" onclick="getModal(['assets/images/305kreationz/necklace_earings_edt/Sizzled_black.jpg'],['Sizzled Black Set - $ 25.0'])"class="image_hover"><span class="fa-solid fa-expand"></span></a></li>
                             </ul>
                         </div>
                         <div class="product__item__text">
@@ -947,9 +946,10 @@
         </div>
     </section>
 
+
     <!-- end of main content-->
     <!-- modal-dialog modal-dialog-centered -->
-    <!-- The Modal -->
+    <!-- First Modal -->
     <div id="myModal" class="modal container-fluid" >
         <span class="close">&times;</span>
         <div class="row ">
@@ -958,7 +958,18 @@
             <div class="col-md-4" > <img class="modal-content " id="img03"> <span id="modal-content-3"></span> </div>
             
         </div>
-        <div id="caption"></div>
+    </div>
+
+    <!-- Second Modal -->
+    <div id="Modal_two" class="modal container-fluid" >
+        <span class="exit">&times;</span>
+        <div class="row ">
+            <div class="col-md-3"></div>
+            <div class="col-md-3" > <img class="modal-content " id="img002"> <span id="modal-contents-2"></span> </div>
+            <div class="col-md-3" > <img class="modal-content " id="img001"> <span id="modal-contents-1"></span> </div>
+            <!-- <div class="col-md-4" > <img class="modal-content " id="img03"> <span id="modal-content-3"></span> </div> -->
+            <div class="col-md-3"></div>
+        </div>
     </div>
 
 </body>
@@ -1002,6 +1013,35 @@
 
     }
 
+    // Modal - 2
+    function Modal_2(paths, captions) {
+        var modal = document.getElementById("Modal_two");
+        // var captionText = document.getElementById("caption");
+        
+        for (var i = 0; i < paths.length; i++) {
+            var modalImg = document.getElementById("img00" + (i + 1));
+            var captionTextAlign = document.getElementById("modal-contents-" + (i + 1));
+
+            modal.style.display = "block";
+            captionTextAlign.style.display = "block";
+
+            modalImg.src = paths[i];
+            captionTextAlign.innerHTML = captions[i];
+
+            console.log(modalImg);
+
+            captionTextAlign.style.color = "white";
+            captionTextAlign.style.textAlign = "center";
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("exit")[0];
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+        }
+
+    }
 
     window.dataLayer = window.dataLayer || [];
 
